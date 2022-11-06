@@ -344,57 +344,64 @@ por “T” para tinto, “B” para branco ou “R” para rosê), descrever o 
 são considerados vinhos de preços iguais. O fim dos dados indicado por nome = “fim”.
 
 ***Variáveis***
-   
-    nomeVinho, tipoVinho, nomeVinhoCaro, tipoVinhoCaro: caractere
-    contador, precoVinho, vinhoMaisCaro: inteiro
+  
+        nomeVinho, tipoVinho, nomeVinhoCaro, tipoVinhoCaro, continuar: caractere
+        contador, precoVinho, vinhoMaisCaro: inteiro
 
 ***Fim Variáveis***
 
 ***Código***
     
     //Declarações de varaiáveis
-    contador <- 0
-    vinhoMaisCaro <- 0
+        contador <- 0
+        vinhoMaisCaro <- 0
 
-    //Informações para o usuário
-    escreval ("----------------------------------------------------------------")
-    escreval ("            *****QUAL È O VINHO MAIS CARO?*****")
-    escreval ("----------------------------------------------------------------")
-    escreval
-    
-    escreval ("Digite três tipos de vinho com seus respectivos nomes e valores")
-    escreval ("sendo (t)para tinto, (b)para branco e (r)para rosê.")
-    escreval
-    escreval ("----------------------------------------------------------------")
-    escreval
-    
-    escreval ("Agora vamos começar, digite três tipos de vinhos diferentes:")
-    escreval ("(Vinhos de valores iguais não serão considerados)")
-    escreval
-    escreval ("----------------------------------------------------------------")
-    
-    //Parte lógica
-    para contador de 0 ate 2 faca
-            escreval ("Digite o nome do vinho:")
-                leia (nomeVinho)
-            escreval ("Digite o tipo do vinho(t,b,r):")
-                leia (tipoVinho)
-            escreval ("Digite o valor vinho:")
-                leia (precoVinho)
-            escreval ("----------------------------------------------------------------")
-            escreval
+        //Informações para o usuário
+        escreval ("----------------------------------------------------------------")
+        escreval ("            *****QUAL È O VINHO MAIS CARO?*****")
+        escreval ("----------------------------------------------------------------")
+        escreval
 
-            se (precoVinho > vinhoMaisCaro) entao
-                nomeVinhoCaro <- nomeVinho
-                tipoVinhoCaro <- tipoVinho
-                vinhoMaisCaro <- precoVinho
-            fimse
-    fimpara
-    
-    limpatela
-    
-    //Print do resultado
-    escreval ("O vinho mais caro é o ",nomeVinhoCaro," do tipo ",tipoVinhoCaro)
+        escreval ("Digite três tipos de vinho com seus respectivos nomes e valores")
+        escreval ("sendo (t)para tinto, (b)para branco e (r)para rosê.")
+        escreval
+        escreval ("----------------------------------------------------------------")
+        escreval
+
+        escreval ("Agora vamos começar, digite três tipos de vinhos diferentes:")
+        escreval ("(Vinhos de valores iguais não serão considerados)")
+        escreval
+        escreval ("----------------------------------------------------------------")
+
+        escreval ("Digite sim para continuar ou digite(fim) para finalizar!")
+                leia (continuar)
+        limpatela
+        
+        //Parte lógica
+        se (continuar <> "fim") entao
+            para contador de 0 ate 2 faca
+                        escreval ("Digite o nome do vinho:")
+                            leia (nomeVinho)
+                        escreval ("Digite o tipo do vinho(t,b,r):")
+                            leia (tipoVinho)
+                        escreval ("Digite o valor vinho:")
+                            leia (precoVinho)
+                        escreval ("----------------------------------------------------------------")
+                        escreval
+
+                        se (precoVinho > vinhoMaisCaro) entao
+                            nomeVinhoCaro <- nomeVinho
+                            tipoVinhoCaro <- tipoVinho
+                            vinhoMaisCaro <- precoVinho
+                        fimse
+            fimpara
+
+            //Print do resultado
+            escreval ("O vinho mais caro é o ",nomeVinhoCaro," do tipo ",tipoVinhoCaro)
+
+        senao
+            contador <- 3
+        fimse
 
 ***Fim do código***
 
