@@ -1,0 +1,471 @@
+
+1. Escreva  um  algoritmo  que  solicite  que  o  usuário  digite  um  número.
+Se  o  número digitado  pelo  usuário  for  positivo  armazene-o  em  uma
+variável  A,  se  for  negativo, armazene-o em uma variável B. No final mostrar o resultado.
+
+    ***Variáveis***
+       
+        positivo, negativo, num, neutro: inteiro
+
+    ***Fim Variáveis***
+
+    ***Código***
+
+        //Dados de entrada do usuário
+        escreval ("Por favor digite um número:")
+            leia (num)
+
+        //Parte lógica e resultados
+        se (num > 0) entao
+            positivo <- num
+            escreval("O número é positivo!!")
+        senao
+             se (num = 0)  entao
+                neutro <- num
+                escreval ("0 é considerado como um número neutro!!")
+             senao
+                  se (num < 0) entao
+                     negativo <- num
+                     escreval("O número é negativo!!")
+                  fimse
+             fimse
+        fimse
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Escreva um algoritmo que leia um número e indique se ele é par ou ímpar.
+
+    ***Variáveis***
+    
+        num: inteiro
+
+    ***Fim Variáveis***
+
+    ***Código***
+
+    //Dados de entrada do usuário
+    escreval ("Por favor digite um número:")
+        leia (num)
+
+    //Parte lógica e resultados
+    se (num mod 2 = 0) entao
+        escreval ("Número par!!")
+
+        senao
+            escreval ("Número impar!!")
+    fimse
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Escreva  um  algoritmo  que  leia  duas  notas  do  aluno  (n1  e  n2)  e  calcule  a  média
+aritmética.  Exibir  a  situação  do  aluno  (aprovado  ou  reprovado),  sendo  que  o  aluno
+somente é aprovado quando a média é maior ou igual a 6.
+
+    ***Variáveis***
+    
+        humanas, exatas, media: inteiro
+        nome: caractere
+        mediaFinal: real
+
+    ***Fim Variáveis***   
+   
+    ***Código***
+
+        escreval ("*********Calcule a sua média!!*********")
+        escreval
+
+        //Dados de entrada do usuário
+        escreval ("Digite o seu nome:")
+            leia (nome)
+            limpatela
+
+        escreval (nome," digite a sua nota em humanas:")
+            leia (humanas)
+            limpatela
+        
+        escreval ("Agora a sua nota em exatas:")
+            leia (exatas)
+            limpatela
+
+        //Declarações de variáveis
+        media <- (humanas + exatas)
+        mediaFinal <- (media/2)
+        
+        //Parte lógica e resultados
+        se (mediaFinal >= 6) entao
+            escreval ("Sua média foi",mediaFinal,", VOCÊ FOI APROVADO :D !!")
+
+        senao
+            escreval ("Sua média foi",mediaFinal,", você foi reprovado :c !!")
+        fimse
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Escreva  um  algoritmo  que  solicite  ao  usuário  que  digite  um  número.
+Esse  número deverá  ser  armazenado  em  uma  variável  numérica.  Exiba  o
+valor  dessa  variável somente se o valor da mesma for maior que 100, caso
+contrário imprimi-la com o valor zero.
+
+    ***Variáveis***
+
+        numero : inteiro
+
+    ***Fim Variáveis***
+
+    ***Código***
+
+        //Dados de entrada do usuário
+        escreval ("Por favor, digite um número maior do que 100: ")
+            leia (numero)
+            limpatela
+
+        //Parte lógica e resultados    
+        se (numero >= 100) entao
+            escreval ("O número digitado foi:",numero)
+
+        senao
+            numero <- 0
+            escreval ("O número digitado é menor do que 100!")
+        fimse
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Escrever  um  algoritmo  que  solicite  ao  usuário  que  digite  três
+números  inteiros  e imprime qual é o menor deles e também a média destes
+números.
+
+    ***Variáveis***
+
+        soma, num_um, num_dois, num_tres: inteiro
+        media : real
+
+    ***Fim Variáveis***
+
+    ***Código***
+
+        //Dados de entrada do usuário
+        escreval ("Digite três números inteiros:")
+            leia (num_um)
+            leia (num_dois)
+            leia (num_tres)
+            limpatela
+
+        //Parte lógica
+        se (num_um < num_dois) e (num_um < num_tres) entao
+            escreval ("O menor número entre os três é:",num_um)
+        senao
+            se (num_dois < num_um) e (num_dois < num_tres) entao
+                 escreval ("O menor número entre os três é:",num_dois)
+            senao
+                se (num_tres < num_um) e (num_tres < num_dois) entao
+                    escreval ("O menor número entre os três é:",num_tres)
+                fimse
+            fimse
+        fimse
+
+        //Declarações de variáveis
+        soma <- (num_um + num_dois + num_tres)
+        media <- (soma / 3)
+
+        //Resultado Final
+        escreval
+        escreval ("A média dos três números digitados é:",media)
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Escreva um algoritmo que solicite ao usuário que digite dois valores
+inteiros e imprime o resultado para as quatro operações básicas
+(soma, subtração, divisão e multiplicação).
+
+    ***Variáveis***
+       
+        somaUm, somaDois, soma: inteiro
+        subUm, subDois, sub: inteiro
+        divUm, divDois: inteiro
+        divi: real
+        multUm, multDois, mult: inteiro
+
+    ***Fim Variáveis***   
+
+    ***Código***
+
+         escreval ("*****Realize operações básicas de matemática(+-/*)*****")
+              escreval
+
+         //todas as partes abaixo contém entrada de dados do usuário, declarações de var e lógica
+         escreval ("Digite dois números inteiros que você deseja somar:")
+            leia (somaUm)
+            leia (somaDois)
+            soma <- (somaUm + somaDois)
+            escreval ("O resultado é:",soma)
+
+              escreval
+              escreval
+
+         escreval ("Digite dois números inteiros que você deseja subtrair:")
+            leia (subUm)
+            leia (subDois)
+            sub <- (subUm - subDois)
+            escreval ("O resultado é:",sub)
+
+              escreval
+              escreval
+
+         escreval ("Digite dois números inteiros que você deseja dividir:")
+            leia (divUm)
+            leia (divDois)
+            divi <- (divUm / divDois)
+            escreval ("O resultado é:",divi)
+
+              escreval
+              escreval
+
+         escreval ("Digite dois números inteiros que você deseja multiplicar:")
+            leia (multUm)
+            leia (multDois)
+            mult <- (multUm * multDois)
+            escreval ("O resultado é:",mult)
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. Escrever um algoritmo que solicite ao usuário que informe o seu peso e a
+sua altura. O  algoritmo  deverá  calcular  e  imprimir  o  Índice  de  Massa
+Corporal,  cuja  fórmula  é IMC = peso / (altura2).
+
+    ***Variáveis***
+        
+        peso, altura, alturaReal, imc: real
+
+    ***Fim Variáveis***
+
+    ***Código***
+
+    escreval ("****CALCULE O SEU ÍNDICE DE MASSA CORPORAL!!****")
+            escreval
+
+       //Dados de entrada do usuário
+        escreval ("Por favor, digite o seu peso(kg):")
+            leia (peso)
+        escreval ("Agora a sua altura(m):")
+            leia (altura)
+
+        //Parte lógica
+        alturaReal <- (altura * altura)
+            imc <- (peso / alturaReal)
+
+        //Resultado final
+            escreval
+        escreval ("O seu IMC é:",imc)
+
+    ***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. A empresa de fornecimento de energia elétrica da sua cidade disponibilizou a tabela
+de consumo de energia elétrica em Kwh. Escreva um algoritmo para calcular a conta
+de energia elétrica de um estabelecimento, considerando a seguinte tabela de valores
+disponibilizada:
+
+    ***Variáveis***
+        
+        kwh: inteiro
+        preco_kwh, horasDia, gastoDia: real
+
+    ***Fim Variáveis***
+    
+    ***Código***
+
+        escreval ("*****Calcule a sua conta de energia elétrica*****")
+            escreval
+
+        //Dados de entrada do usuário
+        escreval ("Digite o consumo Quilowatt-hora(kwh) do seu estabelecimento:")
+            leia (kwh)
+            escreval
+            limpatela
+
+        //Parte lógica
+        se (kwh < 1) entao
+            preco_kwh <- 0
+            escreval ("Valor inválido!!!")
+        senao
+            se (kwh > 0) e (kwh <= 300) entao
+                preco_kwh <- 1.25
+            senao
+                se (kwh > 300) e (kwh <= 600) entao
+                    preco_kwh <- 1.50
+                senao
+                    se (kwh > 600) e (kwh <= 1000) entao
+                        preco_kwh <- 1.75
+                    senao
+                        se (kwh > 1000) entao
+                            preco_kwh <- 2
+                        fimse
+                    fimse
+                fimse
+            fimse
+        fimse
+
+        //Resultados
+        escreval ("De acordo com o seu gasto, o valor do seu Quilowatt-hora(kwh) é:")
+        escreval (preco_kwh)
+            escreval
+
+        escreval ("Digite quantas horas por dia o seu estabelecimento funciona")
+        escreval ("para calcular o seu gasto de energia diário:")
+            leia (horasDia)
+            escreval
+
+        //Declaração de variável    
+        gastoDia <- horasDia * preco_kwh
+
+        //Resultado extra
+        escreval ("O seu gasto de energia diário é:",gastoDia,"R$")
+
+***Fim do código***
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+9. Escreva um algoritmo para, dados o nome, o preço e o tipo dos vinhos (indicados aqui
+por “T” para tinto, “B” para branco ou “R” para rosê), descrever o vinho mais caro. Não
+são considerados vinhos de preços iguais. O fim dos dados indicado por nome = “fim”.
+
+***Variáveis***
+   
+    nomeVinho, tipoVinho, nomeVinhoCaro, tipoVinhoCaro: caractere
+    contador, precoVinho, vinhoMaisCaro: inteiro
+
+***Fim Variáveis***
+
+***Código***
+    
+    //Declarações de varaiáveis
+    contador <- 0
+    vinhoMaisCaro <- 0
+
+    //Informações para o usuário
+    escreval ("----------------------------------------------------------------")
+    escreval ("            *****QUAL È O VINHO MAIS CARO?*****")
+    escreval ("----------------------------------------------------------------")
+    escreval
+    
+    escreval ("Digite três tipos de vinho com seus respectivos nomes e valores")
+    escreval ("sendo (t)para tinto, (b)para branco e (r)para rosê.")
+    escreval
+    escreval ("----------------------------------------------------------------")
+    escreval
+    
+    escreval ("Agora vamos começar, digite três tipos de vinhos diferentes:")
+    escreval ("(Vinhos de valores iguais não serão considerados)")
+    escreval
+    escreval ("----------------------------------------------------------------")
+    
+    //Parte lógica
+    para contador de 0 ate 2 faca
+            escreval ("Digite o nome do vinho:")
+                leia (nomeVinho)
+            escreval ("Digite o tipo do vinho(t,b,r):")
+                leia (tipoVinho)
+            escreval ("Digite o valor vinho:")
+                leia (precoVinho)
+            escreval ("----------------------------------------------------------------")
+            escreval
+
+            se (precoVinho > vinhoMaisCaro) entao
+                nomeVinhoCaro <- nomeVinho
+                tipoVinhoCaro <- tipoVinho
+                vinhoMaisCaro <- precoVinho
+            fimse
+    fimpara
+    
+    limpatela
+    
+    //Print do resultado
+    escreval ("O vinho mais caro é o ",nomeVinhoCaro," do tipo ",tipoVinhoCaro)
+
+***Fim do código***
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. Em uma loja, a política de promoções consiste em dar um “desconto relâmpago” algum 
+produto da loja. O valor durante a promoção é o menor valor entre:
+a. Preço anterior;
+b. Preço atual com desconto de 10%;
+c. Média do preço atual e do preço anterior com desconto de 10%.
+O preço atual é o preço praticado no momento e o preço anterior é o preço praticado 
+antes do último reajuste. Exemplos: 
+a. para um último preço praticado de R$ 10,00, preço atual de R$ 12,00, tem-se 
+como opções R$ 10,00 (anterior), R$ 10,80 (atual com 10%) e R$ 9,90 (média 
+com 10%), sendo o menor R$ 9,90;
+b. para preço anterior R$ 10,00 e preço atual R$ 14,00, as opções são R$ 10,00 
+(anterior), R$ 12,60 (atual com 10%) e R$ 10,80 (média com 10%), sendo o 
+menor R$ 10,00).
+Desenvolva  um  algoritmo  que,  a  partir  do  preço  anterior  e  do  preço  atual  de  um 
+produto, escreva qual seu valor durante a promoção, dadas as regras acima. Assume 
+que sempre os dados digitados serão corretos, isto é, todos os valores maiores que 
+zero.
+
+
+***Variáveis***
+   
+    valorUm, valorDois, atualDesconto, mediaDesconto, calculoUm, calculoDois, media, descontoFinal: real
+
+***Fim Variáveis***
+
+***Código***
+
+    //Dados de entrada do usuário
+    escreval ("******Calcule o valor da sua promoção relâmpago******")
+    escreval
+    
+    escreval ("Digite o valor atual do produto em questão:")
+            leia (valorUm)
+    escreval
+    
+    escreval ("Digite o valor antigo do produto em questão")
+    escreval ("(valor antes do ultimo reajuste):")
+            leia (valorDois)
+    escreval
+    
+    //Declarações de variáveis
+    calculoUm <- (valorUm * 10/100)
+    atualDesconto <- (valorUm - calculoUm)
+    media <- (valorUm + valorDois)/2
+    calculoDois <- (media * 10/100)
+    mediaDesconto <- (media - calculoDois)
+
+    //Parte lógica
+    se (valorUm = 0) ou (valorDois = 0) entao
+        escreval ("Valor igual a 0 não é considerado!")
+    senao
+        se (valorDois < atualDesconto) e (valorDois < mediaDesconto) entao
+            limpatela
+            escreval ("O preço sugerido para o desconto é:",valorDois,"R$")
+        senao
+            se (atualDesconto < valorDois) e (atualDesconto < mediaDesconto) entao
+                limpatela
+                escreval ("O preço sugerido para o desconto é:",atualDesconto,"R$")
+            senao
+                se (mediaDesconto < valorDois) e (mediaDesconto < atualDesconto) entao
+                    limpatela
+                    escreval ("O preço sugerido para o desconto é:",mediaDesconto,"R$")
+                fimse
+            fimse
+        fimse
+    fimse
+
+***Fim do código***
